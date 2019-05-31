@@ -14,12 +14,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="
-	dev-util/scons
+CDEPEND="
 	media-libs/glfw
 	x11-libs/gtk+
 "
-RDEPEND="${DEPEND}"
+DEPEND="
+	${CDEPEND}
+	dev-util/scons
+"
+RDEPEND="${CDEPEND}"
 BDEPEND=""
 
 src_prepare() {
