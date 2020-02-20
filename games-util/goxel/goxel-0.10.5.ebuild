@@ -28,6 +28,8 @@ BDEPEND=""
 src_prepare() {
 	sed -i -e 's/\${SNAP}\/icon.png/goxel/' snap/gui/goxel.desktop || die "prepare failed"
 	default
+	eapply "${FILESDIR}"/no-imgui-ini.patch
+	eapply_user
 }
 
 src_compile() {
